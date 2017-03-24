@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>App Book</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="home">
+
+    <header id="header" >
+
+
+            <div class="wrapper is-flexy is-center ">
+
+                <a href="/" title="Home Page" class="logo"></a>
+
+                <nav id="main-nav" role="navigation" class="is-flexy is-full is-around">
+
+                    <router-link to="books" title="Books">books</router-link>
+                    <router-link to="about" title="About">about</router-link>
+                    <router-link to="contact" title="Contact">contact</router-link>
+
+                </nav><!-- #nav -->
+
+            </div>
+
+    </header>
+
+    <div id="app">
+
+		<!-- <nav>
+			<router-link to="foo">Go to Foo</router-link>
+			<router-link to="bar">Go to Bar</router-link>
+		</nav> -->
+		<!-- route outlet -->
+		<!-- component matched by the route will render here -->
+		<router-view></router-view>
+	</div>
+
+
+  </body>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="/node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="dist/build.js"></script>
+</html>

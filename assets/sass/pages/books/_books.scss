@@ -1,0 +1,228 @@
+.books-results{
+
+  float: left;
+  width: 100%;
+  margin-top: calc(60px + 5vh);
+
+
+  .shimmer-placeholder{
+    float: left;
+    margin-top: 10px;
+    height: 10px;
+
+    &.img{
+      width: 75px;
+      height: auto;
+    }
+
+    &.title{
+      width: 80%;
+    }
+
+    &.text{
+      width: 60%;
+      height: 6px;
+    }
+
+  }
+
+}
+
+
+.book{
+
+  &-item{
+
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 20px 10px 30px 10px;
+    min-height: 180px;
+    border-bottom: 1px solid #ddd;
+
+    border-right: 1px solid #ccc;
+    background: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    &:nth-child(4n-2),
+    &:nth-child(4n-1) {
+
+      border-left: 1px solid #fff;
+      background: #fbfbfb;
+
+    }
+
+    a{text-decoration: none; height: 100%; width: 100%; color: #4A4A4A;}
+
+
+    &-cover{
+
+      position: relative;
+      float: left;
+      width: 75px;
+
+      box-shadow: 5px 9px 24px 0 rgba(0,0,0,0.2),14px 17px 50px -2px rgba(0,0,0,0.2);
+
+      &:before{
+
+        content:'';
+        position: absolute;
+        top: 0;
+        left: -1px;
+        z-index: 0;
+
+        width: 162%;
+        height: 133%;
+
+        background-image: url('assets/img/book-flat-shadow.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+      }
+
+      img{
+
+        position: relative;
+        z-index: 100;
+        float: left;
+        width: 100%;
+
+        transition: all .3s ease-in;
+
+      }
+
+      @include iphone5Portrait{
+        width: 55px;
+      }
+
+    }
+
+
+    &-title{
+
+      float: left;
+      width: 100%;
+
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 18px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+
+      @include iphone5Portrait{
+        font-size: 14px;
+      }
+
+    }
+
+
+    &-author{
+      color: #4A4A4A;
+      font-size:12px;
+      margin-bottom: 15px;
+      font-style: italic;
+    }
+
+
+    &-bottom{
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      float: left;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      background: rgba(0,0,0,0.05);
+
+      span{
+        font-size: 10px;
+        padding: 10px;
+
+        &.price{
+          color: $main_color;
+          font-weight: 400;
+        }
+
+        //hide category on very small screens
+        &:nth-of-type(2){
+          @include iphone5Portrait{
+            display: none;
+          }
+        }
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+  &-format{
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  &-categories{
+    font-size: 12px;
+  }
+  &-published{
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  &-price{
+    &__original{
+      color: #fff;
+      font-size: 12px;
+
+      &.in-offer{
+        text-decoration: line-through;
+      }
+    }
+    &__promo{
+      color: #fff;
+      font-size: 18px;
+    }
+  }
+  &-rating{
+    margin: 20px 0;
+  }
+
+  &-details-row{
+    float: left;
+    width: 100%;
+    margin: 0;
+
+    h3{
+      font-size:18px;
+      font-weight:400;
+      color: #5C5C5C;
+      margin-bottom: 15px;
+      transition: all .3s ease-in;
+    }
+
+    p{
+      font-size:13px;
+      color: #5C5C5C;
+      line-height:25px;
+      transition: all .3s ease-in;
+    }
+  }
+}
