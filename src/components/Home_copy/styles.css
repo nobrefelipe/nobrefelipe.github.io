@@ -1,0 +1,12 @@
+
+.mint-actionsheet-button{
+    background: #dd0000 !important;
+    color: #fff !important;
+}
+
+
+.mint-swipe{
+    float: left;
+    width: 100%;
+    height: 300px !important;
+}

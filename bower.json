@@ -1,0 +1,33 @@
+{
+  "name": "strax_website",
+  "version": "1.0.0",
+  "authors": [
+    "FelipeNobre"
+  ],
+  "description": "HTML, CSS, JS",
+  "main": "",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "json",
+    "bower",
+    "gulp",
+    "wordpress"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "svg4everybody": "~2.0.0"
+  },
+  "dependencies": {
+  }
+}

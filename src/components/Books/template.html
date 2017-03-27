@@ -1,0 +1,55 @@
+<div class="books-results is-flexy is-wrap">
+
+
+
+    <div style="float: left; width: 100%;">
+
+        <button @click="sheetVisible = true" class="filter-btn">
+            filter
+        </button>
+
+    </div>
+
+
+
+    <div v-for="item in collection" class="book-item">
+
+        <router-link :to="'/wptest/'+item.slug" :title="item.title.rendered" class="is-flexy is-center is-top">
+
+            <picture  class="book-item-cover">
+
+                <img :src="item.the_thumbnail" :alt="item.title.rendered">
+
+            </picture>
+
+            <h2 class="book-item-title">{{item.title.rendered}}</h2>
+            <span class="book-item-author">{{item.acf.book_author[0].post_title}}</span>
+
+            <div class="book-item-bottom">
+
+                <span>Hardcover</span>
+                <span>Drama</span>
+                <span class="price">£ {{item.acf.book_price_original}}</span>
+
+            </div>
+
+
+        </router-link>
+
+    </div>
+
+    <div v-for="item of placeholders" v-if="loading" class="book-item is-column is-center">
+        <img src="assets/img/cover-placeholder.png" class="shimmer-placeholder img">
+        <span class="shimmer-placeholder title"></span>
+        <span class="shimmer-placeholder text"></span>
+    </div>
+
+
+    <infinite-loading loaded="loading" :on-infinite="getBooks" v-if="!done" ></infinite-loading>
+
+
+    <mt-actionsheet :actions="actions" v-model="sheetVisible"  cancelText="CANCEL"></mt-actionsheet>
+
+
+
+</div>
