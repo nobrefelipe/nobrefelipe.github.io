@@ -6,3 +6,7 @@ export const getAllPaged = (endpoint, page = 0, extraParams = {}) => {
 
     return Http.get(endpoint, { params }).then(response => response.data);
 };
+
+/*
+    NOT BEING USED FOR NOW
+ */

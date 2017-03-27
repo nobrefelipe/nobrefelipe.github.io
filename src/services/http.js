@@ -7,3 +7,7 @@ const client = axios.create({
 });
 
 export default client;
+
+/*
+ NOT BEING USED FOR NOW
+ */
