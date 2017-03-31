@@ -16,11 +16,14 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.15.3",
+    "firebase": "^3.7.4",
     "mint-ui": "^2.0.4",
     "onsenui": "^2.1.0",
     "vue": "^2.0.1",
     "vue-onsenui": "^2.0.0-alpha.0",
     "vue-resource": "^1.0.3",
+    "vuefire": "^1.4.0",
     "vueify-insert-css": "^1.0.0"
   },
   "devDependencies": {

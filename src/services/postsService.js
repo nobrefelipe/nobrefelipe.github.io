@@ -1,4 +1,3 @@
-
 export default class POSTS {
 
     /**
@@ -8,8 +7,8 @@ export default class POSTS {
      */
     get(url){
 
-        const SITE_REST_URL = 'https://www.nomade.studio/wp-json/wp/v2/';
-        console.log(SITE_REST_URL + url);
+        // const SITE_REST_URL = 'http://localhost/wptest/wp-json/wp/v2/';
+        const SITE_REST_URL = 'https://book-app-1d0bf.firebaseio.com/';
 
         return $.getJSON( SITE_REST_URL + url)
 
@@ -20,6 +19,7 @@ export default class POSTS {
                 });
 
     };
+
 
 
 

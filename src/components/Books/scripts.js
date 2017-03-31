@@ -5,6 +5,7 @@ import POSTS from '../../services/postsService';
 const _POSTS = new POSTS();
 
 
+
 import { Actionsheet } from 'mint-ui';
 Vue.component(Actionsheet.name, Actionsheet);
 
@@ -72,6 +73,7 @@ export default {
 
     methods: {
 
+
         getBooks: function(){
 
             this.loading = true;
@@ -79,7 +81,7 @@ export default {
             //if last page, stop here
             if(this.done) return;
 
-            _POSTS.get( 'books/?per_page=6&page=' + this.paged +  this.endpoint)
+            _POSTS.get('books.json')  //'books/?per_page=6&page=' + this.paged +  this.endpoint
 
                 .then( response => {
 
@@ -92,8 +94,6 @@ export default {
 
                     //update paging
                     this.paged++;
-
-                    console.log(response.obj);
 
                 })
 

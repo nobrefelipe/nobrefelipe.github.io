@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const client = axios.create({
-    baseURL: 'http://localhost/wptest/wp-json/wp/v2/',
+    baseURL: 'https://book-app-1d0bf.firebaseio.com/',
     timeout: 1000,
     headers: {'X-Custom-Header': 'HEADER'}
 });
