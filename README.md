@@ -2,7 +2,8 @@
 
 > ... work in progress...
 
-New Studio Nômade Website, built with Vue.js and Wordpress
+New Studio Nômade [my portfolio] Website built with Vue.js 
+
 
 ## Build Setup
 
