@@ -517,8 +517,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* EXTERNAL LIBRARIES*/
-
-
+ //Mint UI mobile library
+ //Mint UI styles
 
 
 /* MY OWN DIRECTIVES */
@@ -807,62 +807,72 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
   },
 
   data: function data() {
+    var _this = this;
+
     return {
+
+      isMobile: /iPhone|iPod|Android/i.test(navigator.userAgent),
 
       sheetVisible: false,
 
       showFilter: false,
-
-      activeFilter: "all",
 
       allPics: this.$store.state.photography,
 
       filtered: [],
 
       actions: [{
-        name: 'Reset',
-        method: this.resetFilters
+        name: 'All',
+        method: function method() {
+          _this.filterPics('all');
+        }
       }, {
-        name: 'Price Highest',
-        method: this.filter_priceHigh
+        name: 'Street',
+        method: function method() {
+          _this.filterPics('street');
+        }
       }, {
-        name: 'Price Lowest',
-        method: this.filter_priceLow
+        name: 'People',
+        method: function method() {
+          _this.filterPics('people');
+        }
       }, {
-        name: 'A - Z',
-        method: this.filter_aZ
+        name: 'Portrait',
+        method: function method() {
+          _this.filterPics('portrait');
+        }
       }, {
-        name: 'Z - A',
-        method: this.filter_zA
+        name: 'Black and White',
+        method: function method() {
+          _this.filterPics('black and white');
+        }
+      }, {
+        name: 'Landscape',
+        method: function method() {
+          _this.filterPics('landscape');
+        }
       }]
 
     };
   },
   mounted: function mounted() {
-    this.filtered = this.activeFilter == "all" ? this.allPics : [];
+    this.filterPics('all');
   },
 
-
-  computed: {
-    final_data: function final_data() {
-
-      return this.filtered;
-    }
-  },
 
   methods: {
     onFilter: function onFilter(e) {
       if (e.target && e.target.nodeName == "LI") {
-        this.activeFilter = e.target.innerText.toLowerCase();
+        var filter = e.target.innerText.toLowerCase();
 
-        this.filterPics();
+        this.filterPics(filter);
 
         window.scrollTo(0, 0);
 
         this.showFilter = false;
       }
     },
-    filterPics: function filterPics() {
+    filterPics: function filterPics(filter) {
       this.filtered = [];
 
       var _iteratorNormalCompletion = true;
@@ -871,16 +881,16 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
 
       try {
         for (var _iterator = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_get_iterator___default()(this.allPics), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var p = _step.value;
+          var pic = _step.value;
 
 
-          if (this.activeFilter == "all") {
+          if (filter == "all") {
 
-            this.filtered.push(p);
+            this.filtered.push(pic);
           }
 
-          if (p.tags.includes(this.activeFilter)) {
-            this.filtered.push(p);
+          if (pic.tags.includes(filter)) {
+            this.filtered.push(pic);
           }
         }
       } catch (err) {
@@ -1718,7 +1728,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('li', [_vm._v("all")]), _vm._v(" "), _c('li', [_vm._v("street")]), _vm._v(" "), _c('li', [_vm._v("people")]), _vm._v(" "), _c('li', [_vm._v("portrait")]), _vm._v(" "), _c('li', [_vm._v("black and white")]), _vm._v(" "), _c('li', [_vm._v("landscape")])])]), _vm._v(" "), _c('div', {
     staticClass: "gallery"
-  }, _vm._l((_vm.final_data), function(item) {
+  }, _vm._l((_vm.filtered), function(item) {
     return _c('div', {
       staticClass: "gallery-item"
     }, [_c('div', {
@@ -1747,7 +1757,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "sizes": "100vw"
       }
     })])])
-  })), _vm._v(" "), _c('mt-actionsheet', {
+  })), _vm._v(" "), (_vm.isMobile) ? _c('mt-actionsheet', {
     attrs: {
       "actions": _vm.actions,
       "cancelText": "CANCEL"
@@ -1759,7 +1769,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       },
       expression: "sheetVisible"
     }
-  })], 1)
+  }) : _vm._e()], 1)
 },staticRenderFns: []}
 
 /***/ }),
@@ -1933,4 +1943,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[36]);
-//# sourceMappingURL=app.f7bbebc94af52cd52d41.js.map
+//# sourceMappingURL=app.3d02924954d032547628.js.map
