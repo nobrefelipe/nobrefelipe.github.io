@@ -868,8 +868,6 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
         this.filterPics(filter);
 
         window.scrollTo(0, 0);
-
-        this.showFilter = false;
       }
     },
     filterPics: function filterPics(filter) {
@@ -907,10 +905,16 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
           }
         }
       }
+
+      this.showFilter = false;
     },
     revealFilters: function revealFilters() {
 
       this.showFilter = this.showFilter ? false : true;
+    },
+    onCLickOutside: function onCLickOutside() {
+
+      this.showFilter = false;
     }
   }
 
@@ -1697,6 +1701,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('section', {
     staticClass: "photography view "
   }, [_c('div', {
+    directives: [{
+      name: "click-outside",
+      rawName: "v-click-outside",
+      value: (_vm.onCLickOutside),
+      expression: "onCLickOutside"
+    }],
     staticClass: "filter",
     class: {
       'show-filters': _vm.showFilter
@@ -1943,4 +1953,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[36]);
-//# sourceMappingURL=app.3d02924954d032547628.js.map
+//# sourceMappingURL=app.46307ab9e05804dfd1d8.js.map
