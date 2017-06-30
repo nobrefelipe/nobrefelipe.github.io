@@ -391,8 +391,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 33 */,
-/* 34 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -439,7 +438,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].directive('click-outside', {
 });
 
 /***/ }),
-/* 35 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -488,6 +487,47 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].directive('fade-in', {
 });
 
 /***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/*
+
+    ANIMATED SCROLL TO TOP
+    Thanks Qbrid for this pen
+    https://codepen.io/Qbrid/pen/EgAYNg
+
+*/
+
+
+// Needed to cancel the scrolling when we are at the top of the page
+let intervalId = 0;
+
+
+const scrollStep = function() {
+
+    // Check if we are at the top already. If so, stop scrolling by clearing the interval
+    if (window.pageYOffset === 0) {
+
+        clearInterval(intervalId);
+
+    }
+
+    window.scroll(0, window.pageYOffset - 50);
+
+};
+
+const scrollToTop = function() {
+
+    // Call the function scrollStep() every 16.66 millisecons
+    intervalId = setInterval(scrollStep, 16.66);
+
+};
+
+
+/* harmony default export */ __webpack_exports__["a"] = (scrollToTop);
+
+/***/ }),
 /* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -506,7 +546,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_click_outside__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_vue_lazyload__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_vue_lazyload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_vue_lazyload__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue_parallax_js__ = __webpack_require__(33);
 
 /* DEFAULTS */
 
@@ -528,16 +567,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* INSTALLED DIRECTIVES */
 
-
+//import VueParallaxJs from 'vue-parallax-js';
 
 
 
 /* INIT */
+
+// Vuex
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
-__WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_9_vue_parallax_js__["a" /* default */], {minWidth: 500});
+
+// Mint UI
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_5_mint_ui___default.a);
 
-//vue lazyload options
+// Vue Parallax
+//Vue.use(VueParallaxJs, {minWidth: 500});
+
+// Vue Lazy Load
 __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_8_vue_lazyload___default.a, {
 
   preLoad: 1.3,
@@ -584,11 +629,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
 
-      token: '1539883988.1677ed0.cb4c16a66e70487f9b0396edd1ca8115',
-
       userid: 1539883988,
-
-      count: 18,
 
       instafeed: null
 
@@ -597,17 +638,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
+    var params = {
+
+      params: {
+
+        access_token: '1539883988.1677ed0.cb4c16a66e70487f9b0396edd1ca8115',
+
+        count: 18
+      }
+
+    };
+
     var instafeed = document.getElementById('instafeed');
 
-    this.$http.jsonp('https://api.instagram.com/v1/users/' + this.userid + '/media/recent', { params: { access_token: this.token, count: this.count } }).then(function (data) {
+    this.$http.jsonp('https://api.instagram.com/v1/users/' + this.userid + '/media/recent', params).then(function (data) {
 
       _this.instafeed = data.body.data;
     });
-  },
-
-
-  methods: {}
-
+  }
 });
 
 /***/ }),
@@ -786,6 +834,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mint_ui__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mint_ui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mint_ui__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers_scroll_to_top__ = __webpack_require__(35);
+
+
 
 
 
@@ -866,8 +917,6 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
         var filter = e.target.innerText.toLowerCase();
 
         this.filterPics(filter);
-
-        window.scrollTo(0, 0);
       }
     },
     filterPics: function filterPics(filter) {
@@ -907,6 +956,8 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
       }
 
       this.showFilter = false;
+
+      __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__helpers_scroll_to_top__["a" /* default */])();
     },
     revealFilters: function revealFilters() {
 
@@ -1008,8 +1059,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_items_index_vue__ = __webpack_require__(93);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_menu_items_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_menu_items_index_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_click_outside__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_fadeIn__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_click_outside__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_fadeIn__ = __webpack_require__(34);
 //
 //
 //
@@ -1498,15 +1549,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('router-link', {
     attrs: {
-      "to": "/photography",
-      "title": "PHOTOGRAPHY"
-    }
-  }, [_vm._v("photography")]), _vm._v(" "), _c('router-link', {
-    attrs: {
       "to": "/web-development",
       "title": "WEB DEVELOPMENT"
     }
   }, [_vm._v("web development")]), _vm._v(" "), _c('router-link', {
+    attrs: {
+      "to": "/photography",
+      "title": "PHOTOGRAPHY"
+    }
+  }, [_vm._v("photography")]), _vm._v(" "), _c('router-link', {
     attrs: {
       "to": "/lab",
       "title": "LABORATORY"
@@ -1570,7 +1621,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/lab",
       "title": "LABORATORY"
     }
-  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments usgin Vue.js. "), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments usgin Vue.js. "), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
+    staticClass: "is-text-center"
+  }, [_vm._v("\n\n    I also master :\n\n  ")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "features"
   }, _vm._l((_vm.features), function(item) {
     return _c('div', {
@@ -1616,7 +1669,31 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/wordpress-icon.png",
-      "alt": "WORDPRESS"
+      "alt": "WORPRESS"
+    }
+  })]), _vm._v(" "), _c('li', [_c('img', {
+    attrs: {
+      "src": "static/img/timber-icon.png",
+      "alt": "TIMBER"
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('ul', {
+    staticClass: "skills-icons is-flexy is-center"
+  }, [_c('li', [_c('img', {
+    attrs: {
+      "src": "static/img/sketch-icon.png",
+      "alt": "SKETCH APP"
+    }
+  })]), _vm._v(" "), _c('li', [_c('img', {
+    attrs: {
+      "src": "static/img/photoshop-icon.png",
+      "alt": "PHOTOSHOP"
+    }
+  })]), _vm._v(" "), _c('li', [_c('img', {
+    attrs: {
+      "src": "static/img/lightroom-icon.png",
+      "alt": "LIGHTROOM"
     }
   })])])
 }]}
@@ -1737,17 +1814,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   }, [_c('li', [_vm._v("all")]), _vm._v(" "), _c('li', [_vm._v("street")]), _vm._v(" "), _c('li', [_vm._v("people")]), _vm._v(" "), _c('li', [_vm._v("portrait")]), _vm._v(" "), _c('li', [_vm._v("black and white")]), _vm._v(" "), _c('li', [_vm._v("landscape")])])]), _vm._v(" "), _c('div', {
-    staticClass: "gallery"
+    staticClass: "gallery",
+    attrs: {
+      "id": "gallery"
+    }
   }, _vm._l((_vm.filtered), function(item) {
     return _c('div', {
       staticClass: "gallery-item"
     }, [_c('div', {
-      directives: [{
-        name: "parallax",
-        rawName: "v-parallax",
-        value: (0.05),
-        expression: "0.05"
-      }],
       staticClass: "caption"
     }, [_c('h5', [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c('div', {
       staticClass: "camera-settings"
@@ -1856,7 +1930,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/lab",
       "title": "Lab"
     }
-  }, [_vm._v("Lab")]), _vm._v(" page."), _c('br'), _vm._v("\n\n    I would like to share four projetcs tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
+  }, [_vm._v("Lab")]), _vm._v(" page."), _c('br'), _vm._v("\n\n    I would like to mention four projetcs tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
     attrs: {
       "href": "http://inovestills.com/",
       "title": "Inove Stills",
@@ -1880,7 +1954,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": "Pan Macmillan Australia",
       "target": "_blank"
     }
-  }, [_vm._v("Pan Macmillan Australia")]), _vm._v(" "), _c('br'), _c('br'), _vm._v("\n\n    Being a Front End Developer is a constant learning life as I need to be up to date with the latest technologies and trends so I can offer the best.\n    That's why I keep my eyes everyday on websites like: "), _c('strong', [_vm._v("Codrops")]), _vm._v(", "), _c('strong', [_vm._v("SmashMagazine")]), _vm._v(", "), _c('strong', [_vm._v("Tableless")]), _vm._v(", "), _c('strong', [_vm._v("UpLabs")]), _vm._v(", "), _c('strong', [_vm._v("TechCrunch")]), _vm._v(" and more."), _c('br'), _c('br'), _vm._v("\n\n    Check my code on   "), _c('a', {
+  }, [_vm._v("Pan Macmillan Australia")]), _vm._v(".\n\n    "), _c('br'), _c('br'), _vm._v("\n\n    Being a Front End Developer is a constant learning life as I need to be up to date with the latest technologies and trends so I can offer the best.\n    That's why I keep my eyes everyday on websites like: "), _c('strong', [_vm._v("Codrops")]), _vm._v(", "), _c('strong', [_vm._v("SmashMagazine")]), _vm._v(", "), _c('strong', [_vm._v("Tableless")]), _vm._v(", "), _c('strong', [_vm._v("UpLabs")]), _vm._v(", "), _c('strong', [_vm._v("TechCrunch")]), _vm._v(" and more."), _c('br'), _c('br'), _vm._v("\n\n    Check my code on   "), _c('a', {
     attrs: {
       "href": "https://github.com/nobrefelipe",
       "title": "GITHUB",
@@ -1896,7 +1970,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "mailto:felipe@nomade.studio",
       "title": "HIRE ME"
     }
-  }, [_vm._v("Hire me")]), _vm._v("!\n\n  ")], 1), _vm._v(" "), _c('br'), _c('br'), _c('br'), _c('br'), _vm._v(" "), _c('h1', [_vm._v("The photographer")]), _vm._v(" "), _vm._m(0), _c('h3', [_vm._v("Instagram feed")]), _vm._v(" "), _c('p'), _vm._v(" "), _c('ul', {
+  }, [_vm._v("Hire me")]), _vm._v("!\n\n  ")], 1), _vm._v(" "), _c('br'), _c('br'), _vm._v(" "), _c('h1', [_vm._v("The photographer")]), _vm._v(" "), _vm._m(0), _c('h3', [_vm._v("Instagram feed")]), _vm._v(" "), _c('p'), _vm._v(" "), _c('ul', {
     staticClass: "is-flexy is-wrap",
     attrs: {
       "id": "instafeed"
@@ -1917,7 +1991,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })])])
   }))])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('p', [_vm._v("\n\n    After three years in London, I decided was time for a a break. I got married with a old friend from Italy and we decided to go travel South East Asia for a year."), _c('br'), _c('br'), _vm._v("\n\n    I started developing some good skills with my camera, I never thought I would like photography, now I love it. I learned how to master my camera and how to find the best shots.\n    Being in Asia was a school for life. Understanding people and culture was critical to find places and take pictures that would make me proud."), _c('br'), _c('br'), _vm._v("\n\n    We spent an entire month travelling Vietnam from South to North, taking busy buses and collecting amazing experiences. In Vietnam I've got to love taking portrait pictures and be\n    around looking for something I wouldn't know until I get my lenses in front of my eyes."), _c('br'), _c('br')])
+  return _c('p', [_vm._v("\n\n    After three years in London, I decided that was time for a break. I got married with a old friend from Brazil and we decided to go travel South East Asia for a year."), _c('br'), _c('br'), _vm._v("\n\n    I started developing some good skills with my camera, I never thought I would like photography, now I love it. I learned how to master my camera and how to find the best shots.\n    In the beginning I was only into landscape photography, but now I cant stop thinking on street photography and black and white projects for the furure.\n    Being in Asia was a school for life. Understanding people and culture was critical to find places and take pictures that would make me proud."), _c('br'), _c('br'), _vm._v("\n\n    We spent an entire month travelling Vietnam from South to North, taking busy buses and collecting amazing experiences. In Vietnam I've got to love taking portrait pictures and being\n    around looking for something I wouldn't know until I get my lenses in front of my eyes."), _c('br'), _c('br')])
 }]}
 
 /***/ }),
@@ -1953,4 +2027,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[36]);
-//# sourceMappingURL=app.46307ab9e05804dfd1d8.js.map
+//# sourceMappingURL=app.1713c9e477d6fe203c5b.js.map
