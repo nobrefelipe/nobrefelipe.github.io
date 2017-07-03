@@ -1616,12 +1616,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "web-development view"
   }, [_c('h1', [_vm._v("WEB DEVELOPMENT")]), _vm._v(" "), _c('p', {
     staticClass: "is-text-center"
-  }, [_vm._v("\n\n    I have been developing websites sice 2011, when I first jump into a Front End Developer Intership in Milan, Italy"), _c('br'), _vm._v("\n\n    After 2 months of watching tutorials and reading articles I passed from ‘knowing nothing’  to  ‘have some idea’ about web development."), _c('br'), _vm._v("\n\n    But that was enought for the guys from More Interactive to give me a try :)"), _c('br'), _c('br'), _vm._v("\n\n    Since that I keep learning as much as I can. It’s been 7 years of great opportunities, great people "), _c('br'), _vm._v("\n\n    and amazing projects from Agencies in Milan to a Startup in London and from Contracts in Thailand to Remotes in Europe."), _c('br'), _c('br'), _vm._v("\n\n    Have a look on my  "), _c('router-link', {
+  }, [_vm._v("\n\n    I have been developing websites since 2011, when I first jump into a Front End Developer Internship in Milan, Italy"), _c('br'), _vm._v("\n\n    After 2 months of watching tutorials and reading articles I passed from ‘knowing nothing’  to  ‘have some idea’ about web development."), _c('br'), _vm._v("\n\n    But that was enough for the guys from "), _c('a', {
+    attrs: {
+      "href": "http://www.more.it",
+      "target": "_blank",
+      "title": "More Interactive"
+    }
+  }, [_vm._v("More Interactive")]), _vm._v(" to give me a try :)"), _c('br'), _c('br'), _vm._v("\n\n    Since that I keep learning as much as I can. It’s been 7 years of great opportunities, great people "), _c('br'), _vm._v("\n\n    and amazing projects from Agencies in Milan to a Startup in London and from Contracts in Thailand to Remotes in Europe."), _c('br'), _c('br'), _vm._v("\n\n    Have a look on my  "), _c('router-link', {
     attrs: {
       "to": "/lab",
       "title": "LABORATORY"
     }
-  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments usgin Vue.js. "), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
+  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments using Vue.js."), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
     staticClass: "is-text-center"
   }, [_vm._v("\n\n    I also master :\n\n  ")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "features"
@@ -1920,7 +1926,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "/static/img/felipe-nobre-portrait-shot.png",
       "alt": "Felipe Nobre Portrait Shot"
     }
-  }), _vm._v("\n\n    Hi there, my name is Felipe Nobre, I am a Front End Developer. I was born in Brazil but I call many places home. I moved to Italy when I was 17 years old and I am current living in Oxford, UK. "), _c('br'), _c('br'), _vm._v("\n\n    I have been developing websites for the past 7 years. I started my career working as a junior front end developer in a web agency in Milan.\n    I have always been a self-taught guy, learning everything by myself made/make me have a better idea of my potential and limitations."), _c('br'), _c('br'), _vm._v("\n\n    After 3 years working in Milan I decided it was time for a change, so in 2013 I moved to London looking for the 'startup dream work'.\n    I got there eventually, working with "), _c('a', {
+  }), _vm._v("\n\n    Hi there, my name is Felipe Nobre, I am a Front End Developer. I was born in Brazil but I call many places home. I moved to Italy when I was 17 years old and I am current living in Oxford, UK. "), _c('br'), _c('br'), _vm._v("\n\n    I have been developing websites for the past 7 years. I started my career working as a junior front end developer in a web agency in Milan.\n    I have always been a self-taught guy, learning everything by myself made/makes me have a better idea of my potential and limitations."), _c('br'), _c('br'), _vm._v("\n\n    After 3 years working in Milan I decided it was time for a change, so in 2013 I moved to London looking for the 'startup dream work'.\n    I got there eventually, working with "), _c('a', {
     attrs: {
       "href": "https://www.wazoku.com",
       "target": "_blank"
@@ -1930,7 +1936,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/lab",
       "title": "Lab"
     }
-  }, [_vm._v("Lab")]), _vm._v(" page."), _c('br'), _vm._v("\n\n    I would like to mention four projetcs tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
+  }, [_vm._v("Lab")]), _vm._v(" page."), _c('br'), _vm._v("\n\n    I would like to mention four projects tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
     attrs: {
       "href": "http://inovestills.com/",
       "title": "Inove Stills",
@@ -1954,13 +1960,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "title": "Pan Macmillan Australia",
       "target": "_blank"
     }
-  }, [_vm._v("Pan Macmillan Australia")]), _vm._v(".\n\n    "), _c('br'), _c('br'), _vm._v("\n\n    Being a Front End Developer is a constant learning life as I need to be up to date with the latest technologies and trends so I can offer the best.\n    That's why I keep my eyes everyday on websites like: "), _c('strong', [_vm._v("Codrops")]), _vm._v(", "), _c('strong', [_vm._v("SmashMagazine")]), _vm._v(", "), _c('strong', [_vm._v("Tableless")]), _vm._v(", "), _c('strong', [_vm._v("UpLabs")]), _vm._v(", "), _c('strong', [_vm._v("TechCrunch")]), _vm._v(" and more."), _c('br'), _c('br'), _vm._v("\n\n    Check my code on   "), _c('a', {
+  }, [_vm._v("Pan Macmillan Australia")]), _vm._v(".\n\n    "), _c('br'), _c('br'), _vm._v("\n\n    Being a Front End Developer is a constant learning life as I need to be up to date with the latest technologies and trends so I can offer the best.\n    That's why I keep my eyes on websites like: "), _c('strong', [_vm._v("Codrops")]), _vm._v(", "), _c('strong', [_vm._v("SmashMagazine")]), _vm._v(", "), _c('strong', [_vm._v("Tableless")]), _vm._v(", "), _c('strong', [_vm._v("UpLabs")]), _vm._v(", "), _c('strong', [_vm._v("TechCrunch")]), _vm._v(" and more."), _c('br'), _c('br'), _vm._v("\n\n    Check my code on "), _c('a', {
     attrs: {
       "href": "https://github.com/nobrefelipe",
       "title": "GITHUB",
       "target": "_blank"
     }
-  }, [_vm._v("Github")]), _vm._v("\n    and have a look on my  "), _c('router-link', {
+  }, [_vm._v("Github")]), _vm._v("\n    and have a look on my "), _c('router-link', {
     attrs: {
       "to": "/web-development",
       "title": "WEB DEVELOPMENT"
@@ -2027,4 +2033,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[36]);
-//# sourceMappingURL=app.1713c9e477d6fe203c5b.js.map
+//# sourceMappingURL=app.2e8d8f36d9d011b57285.js.map
