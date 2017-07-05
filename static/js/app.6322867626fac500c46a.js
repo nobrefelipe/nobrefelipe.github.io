@@ -207,9 +207,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue
         photography: [
 
             {
-                title: "the vietnamese girl",
-                description: "the vietnamese girl description",
-                image: "https://drscdn.500px.org/photo/156654925/q%3D80_m%3D2000/90686243382daf4ac0f4cd51e4b43442",
+                title: "urban-exploration-series-1",
+                description: "",
+                image: "",
                 tags: ["portrait", "people"],
                 settings: {
 
@@ -224,15 +224,15 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue
             },
 
             {
-                title: "the girl",
-                description: "the vietnamese girl description",
-                image: "https://drscdn.500px.org/photo/216218489/q%3D80_m%3D2000/623e5f6f9edb4f81fc57f7f54ed3705e",
+                title: "urban-exploration-series-2",
+                description: "",
+                image: "",
                 tags: ["portrait", "people"],
                 settings: {
 
                     camera: "NX1",
                     lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"113",
+                    focal_length:"130",
                     aperture: "5",
                     shutter_speed: "1/320",
                     iso: "200"
@@ -241,123 +241,180 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].use(__WEBPACK_IMPORTED_MODULE_1_vue
             },
 
             {
-                title: "paddling in the light",
-                description: "paddling in the light description",
-                image: "https://drscdn.500px.org/photo/155602957/q%3D80_m%3D2000/db87548747518b05cebc2041c74dbdf9",
-                tags: ["people", "black and white"],
+                title: "urban-exploration-series-3",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
                 settings: {
 
                     camera: "NX1",
                     lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"200",
-                    aperture: "5.6",
-                    shutter_speed: "1/160",
-                    iso: "100"
-
-                }
-            },
-
-            {
-                title: "thoughts",
-                description: "thoughts description",
-                image: "https://drscdn.500px.org/photo/155392829/q%3D80_m%3D2000/7c41b24d95ea0d8ffe0c233928a166d9",
-                tags: ["people", "black and white"],
-                settings: {
-
-                    camera: "NX1",
-                    lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"200",
-                    aperture: "5.6",
-                    shutter_speed: "1/320",
-                    iso: "500"
-
-                }
-            },
-
-            {
-                title: "the old man",
-                description: "the old man description",
-                image: "https://drscdn.500px.org/photo/155389821/q%3D80_m%3D2000/74786dc988916d97a2dd583061b20027",
-                tags: ["people"],
-                settings: {
-
-                    camera: "NX1",
-                    lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"50",
-                    aperture: "4",
-                    shutter_speed: "1/320",
-                    iso: "250"
-
-                }
-            },
-
-            {
-                title: "heading the infinity",
-                description: "heading the infinity description",
-                image: "https://drscdn.500px.org/photo/155389827/q%3D80_m%3D1500/f07f66ead5a96f3866470210008faab6",
-                tags: ["people"],
-                settings: {
-
-                    camera: "NX1",
-                    lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"50",
+                    focal_length:"130",
                     aperture: "5",
                     shutter_speed: "1/320",
-                    iso: "100"
-
-                }
-            },
-
-            {
-                title: "desolation",
-                description: "desolation description",
-                image: "https://drscdn.500px.org/photo/147856551/q%3D80_m%3D2000/0daec028eb3d4deb605d8f90d930a570",
-                tags: ["landscape", "nature"],
-                settings: {
-
-                    camera: "NX1",
-                    lenses: "NX 16mm",
-                    focal_length:"16",
-                    aperture: "5",
-                    shutter_speed: "1/320s",
                     iso: "200"
 
                 }
             },
 
             {
-                title: "the sunset boat",
-                description: "the sunset boat description",
-                image: "https://drscdn.500px.org/photo/147717849/q%3D80_m%3D2000/9a1e76a8d88779d17999e6e88b690fca",
-                tags: ["landscape", "nature"],
+                title: "urban-exploration-series-4",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
                 settings: {
 
                     camera: "NX1",
-                    lenses: "NX 16mm",
-                    focal_length:"16",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
                     aperture: "5",
-                    shutter_speed: "1/320s",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+
+            {
+                title: "sunset-bangkok",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+
+            {
+                title: "through-the-gate",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
                     iso: "200"
 
                 }
             },
 
             {
-                title: "abandoned pier",
-                description: "abandoned pier description",
-                image: "https://drscdn.500px.org/photo/146396817/q%3D80_m%3D2000/c69c976886aa4a5b881b91ca31c0abb7",
-                tags: ["landscape", "nature"],
+                title: "viatnamese-faces-series-1",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
                 settings: {
 
-                    camera: "NX 16mm",
+                    camera: "NX1",
                     lenses: "NX 50-200mm F4-5.6",
-                    focal_length:"16",
-                    aperture: "22",
-                    shutter_speed: "25",
-                    iso: "100"
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
 
                 }
             },
+
+            {
+                title: "viatnamese-faces-series-2",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+            {
+                title: "viatnamese-faces-series-3",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+            {
+                title: "viatnamese-faces-series-4",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+            {
+                title: "viatnamese-faces-series-5",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+            {
+                title: "viatnamese-faces-series-6",
+                description: "",
+                image: "",
+                tags: ["portrait", "people"],
+                settings: {
+
+                    camera: "NX1",
+                    lenses: "NX 50-200mm F4-5.6",
+                    focal_length:"130",
+                    aperture: "5",
+                    shutter_speed: "1/320",
+                    iso: "200"
+
+                }
+            },
+
+
+
+
 
 
         ]
@@ -850,9 +907,9 @@ __WEBPACK_IMPORTED_MODULE_1_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
 
   filters: {
 
-    sanitize: function sanitize(value) {
+    unsanitize: function unsanitize(value) {
 
-      return value.replace(/ /g, "-");
+      return value.replace(/-/g, " ");
     }
 
   },
@@ -1627,7 +1684,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "to": "/lab",
       "title": "LABORATORY"
     }
-  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments using Vue.js."), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
+  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments using Vue.js."), _c('br'), _c('br'), _vm._v("\n\n    By the way, this website is built with Vue.js and "), _c('i', [_vm._v("should")]), _vm._v(" work offline as well by the power of Service Workers (on supported browser of course)."), _c('br'), _c('br'), _vm._v("\n\n    I love developing websites with Wordpress + Advanced Custom Fields + Timber (Twig for Wordpress). And now with Worpdress REST API + Vue.js\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
     staticClass: "is-text-center"
   }, [_vm._v("\n\n    I also master :\n\n  ")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "features"
@@ -1829,7 +1886,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "gallery-item"
     }, [_c('div', {
       staticClass: "caption"
-    }, [_c('h5', [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c('div', {
+    }, [_c('h5', [_vm._v(_vm._s(_vm._f("unsanitize")(item.title)))]), _vm._v(" "), _c('div', {
       staticClass: "camera-settings"
     }, [_c('span', [_vm._v(_vm._s(item.settings.camera))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.settings.lenses))]), _vm._v(" "), _c('div', {
       staticClass: "lenses-settings"
@@ -1839,8 +1896,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       directives: [{
         name: "lazy",
         rawName: "v-lazy",
-        value: (item.image),
-        expression: "item.image"
+        value: ('http://res.cloudinary.com/studio-nomade/image/upload/' + item.title),
+        expression: "'http://res.cloudinary.com/studio-nomade/image/upload/' + item.title"
       }],
       attrs: {
         "alt": item.title,
@@ -2033,4 +2090,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[36]);
-//# sourceMappingURL=app.2e8d8f36d9d011b57285.js.map
+//# sourceMappingURL=app.6322867626fac500c46a.js.map
