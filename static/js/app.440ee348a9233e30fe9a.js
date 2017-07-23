@@ -1420,7 +1420,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
       }, {
         name: 'Black and White',
         method: function method() {
-          _this.filterPics('black and white');
+          _this.filterPics('bnw');
         }
       }, {
         name: 'Landscape',
@@ -2549,4 +2549,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[42]);
-//# sourceMappingURL=app.7588254c04ecee4d4355.js.map
+//# sourceMappingURL=app.440ee348a9233e30fe9a.js.map
