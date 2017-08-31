@@ -1375,9 +1375,9 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
 
   filters: {
 
-    unsanitize: function unsanitize(value) {
+    sanitize: function sanitize(value) {
 
-      return value.replace(/-/g, " ");
+      return value.replace(/ /g, "-");
     }
 
   },
@@ -1444,6 +1444,11 @@ __WEBPACK_IMPORTED_MODULE_0_vue__["default"].component(__WEBPACK_IMPORTED_MODULE
 
 
   methods: {
+    sanitize: function sanitize(string) {
+
+      var string = string.replace(/ /g, "-");
+      return string.replace(/---/g, "-");
+    },
     onFilter: function onFilter(e) {
       if (e.target && e.target.nodeName == "LI") {
         var filter = e.target.innerText.toLowerCase();
@@ -2076,11 +2081,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("photography")]), _vm._v(" "), _c('router-link', {
     attrs: {
-      "to": "/lab",
-      "title": "LABORATORY"
-    }
-  }, [_vm._v("laboratory")]), _vm._v(" "), _c('router-link', {
-    attrs: {
       "to": "/about",
       "title": "ABOUT ME"
     }
@@ -2131,22 +2131,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('section', {
     staticClass: "web-development view"
-  }, [_c('h1', [_vm._v("WEB DEVELOPMENT")]), _vm._v(" "), _c('p', {
+  }, [_c('h1', [_vm._v("WEB DEVELOPMENT")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('p', {
     staticClass: "is-text-center"
-  }, [_vm._v("\n\n    I have been developing websites since 2011, when I first jump into a Front End Developer Internship in Milan, Italy"), _c('br'), _vm._v("\n\n    After 2 months of watching tutorials and reading articles I passed from ‘knowing nothing’  to  ‘have some idea’ about web development."), _c('br'), _vm._v("\n\n    But that was enough for the guys from "), _c('a', {
-    attrs: {
-      "href": "http://www.more.it",
-      "target": "_blank",
-      "title": "More Interactive"
-    }
-  }, [_vm._v("More Interactive")]), _vm._v(" to give me a try :)"), _c('br'), _c('br'), _vm._v("\n\n    Since that I keep learning as much as I can. It’s been 7 years of great opportunities, great people "), _c('br'), _vm._v("\n\n    and amazing projects from Agencies in Milan to a Startup in London and from Contracts in Thailand to Remotes in Europe."), _c('br'), _c('br'), _vm._v("\n\n    Have a look on my  "), _c('router-link', {
-    attrs: {
-      "to": "/lab",
-      "title": "LABORATORY"
-    }
-  }, [_vm._v("Lab")]), _vm._v(" page for some coding experiments using Vue.js."), _c('br'), _c('br'), _vm._v(" "), _vm._v("\n\n    I love developing websites with Wordpress + Advanced Custom Fields + Timber (Twig for Wordpress). And now with Worpdress REST API + Vue.js\n    "), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")], 1), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
-    staticClass: "is-text-center"
-  }, [_vm._v("\n\n    I also master :\n\n  ")]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
+  }, [_vm._v("\n\n    I also master :\n\n  ")]), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('blockquote', [_vm._v("\n\n    Working as a freelancer is not just about the coding. "), _c('br'), _vm._v("\n    I understand the challenges of working remotely on client projects."), _c('br'), _vm._v("\n    Here’s a couple of things I think I’m good at:\n\n  ")]), _vm._v(" "), _c('div', {
     staticClass: "features"
   }, _vm._l((_vm.features), function(item) {
     return _c('div', {
@@ -2167,37 +2154,59 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })])
   }))], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', {
+    staticClass: "is-text-center"
+  }, [_vm._v("\n\n    I have been developing websites since 2011, when I first jump into a Front End Developer Internship in Milan, Italy"), _c('br'), _vm._v("\n\n    After 2 months of watching tutorials and reading articles I passed from ‘knowing nothing’  to  ‘have some idea’ about web development."), _c('br'), _vm._v("\n\n    But that was enough for the guys from "), _c('a', {
+    attrs: {
+      "href": "http://www.more.it",
+      "target": "_blank",
+      "title": "More Interactive"
+    }
+  }, [_vm._v("More Interactive")]), _vm._v(" to give me a try :)"), _c('br'), _c('br'), _vm._v("\n\n    Since that I keep learning as much as I can. It’s been 7 years of great opportunities, great people "), _c('br'), _vm._v("\n\n    and amazing projects from Agencies in Milan to a Startup in London and from Contracts in Thailand to Remotes in Europe."), _c('br'), _c('br'), _vm._v(" "), _vm._v("\n\n    I love developing websites with Wordpress + Advanced Custom Fields + Timber (Twig for Wordpress). And now with Worpdress REST API + Vue.js\n    "), _c('br'), _c('br'), _vm._v("\n\n    My main skills are:\n\n  ")])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('ul', {
     staticClass: "skills-icons is-flexy is-center"
   }, [_c('li', [_c('img', {
     attrs: {
       "src": "static/img/html5-icon.png",
-      "alt": "HTML 5"
+      "alt": "HTML 5",
+      "title": "HTML 5"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/css3-icon.png",
-      "alt": "CSS 3"
+      "alt": "CSS 3",
+      "title": "CSS 3"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/js-icon.png",
-      "alt": "JAVASCRIPT"
+      "alt": "JAVASCRIPT",
+      "title": "JAVASCRIPT"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/vuejs-icon.png",
-      "alt": "VUE JS"
+      "alt": "VUE JS",
+      "title": "VUE JS"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/wordpress-icon.png",
-      "alt": "WORPRESS"
+      "alt": "WORDPRESS",
+      "title": "WORDPRESS"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/timber-icon.png",
-      "alt": "TIMBER"
+      "alt": "TIMBER",
+      "title": "TIMBER"
+    }
+  })]), _vm._v(" "), _c('li', [_c('img', {
+    attrs: {
+      "src": "static/img/graphcool.svg",
+      "alt": "GRAPHCOOL",
+      "title": "GRAPHCOOL"
     }
   })])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2206,17 +2215,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('li', [_c('img', {
     attrs: {
       "src": "static/img/sketch-icon.png",
-      "alt": "SKETCH APP"
+      "alt": "SKETCH APP",
+      "title": "SKETCH APP"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/photoshop-icon.png",
-      "alt": "PHOTOSHOP"
+      "alt": "PHOTOSHOP",
+      "title": "PHOTOSHOP"
     }
   })]), _vm._v(" "), _c('li', [_c('img', {
     attrs: {
       "src": "static/img/lightroom-icon.png",
-      "alt": "LIGHTROOM"
+      "alt": "LIGHTROOM",
+      "title": "LIGHTROOM"
     }
   })])])
 }]}
@@ -2356,11 +2368,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       directives: [{
         name: "lazy",
         rawName: "v-lazy",
-        value: (item.image_url),
-        expression: "item.image_url"
+        value: ('https://res.cloudinary.com/studio-nomade/image/upload/w_2000/' + _vm.sanitize(item.title)),
+        expression: "'https://res.cloudinary.com/studio-nomade/image/upload/w_2000/' + sanitize(item.title)"
       }],
       attrs: {
-        "alt": ""
+        "data-srcset": 'https://res.cloudinary.com/studio-nomade/image/upload/w_800/' + _vm.sanitize(item.title) + ' 800w, ' +
+          'https://res.cloudinary.com/studio-nomade/image/upload/w_1200/' + _vm.sanitize(item.title) + ' 1200w, ' +
+          'https://res.cloudinary.com/studio-nomade/image/upload/w_2000/' + _vm.sanitize(item.title) + ' 2000w',
+        "sizes": "(max-width: 984px) 100vw, 984px",
+        "alt": item.title
       }
     })])])
   })), _vm._v(" "), (_vm.isMobile) ? _c('mt-actionsheet', {
@@ -2447,12 +2463,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "https://www.wazoku.com",
       "target": "_blank"
     }
-  }, [_vm._v("Wazoku")]), _vm._v(" was an amazing experience."), _c('br'), _c('br'), _vm._v("\n\n    After that things just started to happen and I was already receiving great offers/opportunities and started to build my life in the UK.\n\n    In the past 3 years I had the opportunity to be part of great projects from different locations all around the world. "), _c('br'), _vm._v("\n\n    I don't really like the idea of listing projects and clients or having case studies. I prefer to show my skills working and showcasing personal\n    projects and experiments on my "), _c('router-link', {
-    attrs: {
-      "to": "/lab",
-      "title": "Lab"
-    }
-  }, [_vm._v("Lab")]), _vm._v(" page."), _c('br'), _vm._v("\n\n    I would like to mention four projects tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
+  }, [_vm._v("Wazoku")]), _vm._v(" was an amazing experience."), _c('br'), _c('br'), _vm._v("\n\n    After that things just started to happen and I was already receiving great offers/opportunities and started to build my life in the UK.\n\n    In the past 3 years I had the opportunity to be part of great projects from different locations all around the world. "), _c('br'), _vm._v("\n\n    I don't really like the idea of listing projects and clients or having case studies. I prefer to show my skills working and showcasing personal\n    projects and experiments on Github.\n    "), _vm._v("\n\n    I would like to mention four projects tough, two of my firsts projects and two of the biggest clients I have worked with:\n\n    "), _c('br'), _c('br'), _vm._v(" "), _c('a', {
     attrs: {
       "href": "http://inovestills.com/",
       "title": "Inove Stills",
@@ -2549,4 +2560,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[42]);
-//# sourceMappingURL=app.440ee348a9233e30fe9a.js.map
+//# sourceMappingURL=app.ec8a08bfee68d1b0269b.js.map
